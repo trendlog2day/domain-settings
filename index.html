@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrendLog2Day - Global</title>
+    <meta name="description" content="Welcome to TrendLog2Day. Please select your region to continue.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --text-color: #ffffff;
+            --card-bg: rgba(255, 255, 255, 0.95);
+            --card-text: #1a202c;
+            --btn-hover: #f7fafc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--primary-gradient);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--card-text);
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Animated background shapes */
+        .shape {
+            position: absolute;
+            filter: blur(50px);
+            z-index: 0;
+            animation: float 20s infinite;
+        }
+
+        .shape-1 {
+            top: -10%;
+            left: -10%;
+            width: 50vw;
+            height: 50vw;
+            background: rgba(102, 126, 234, 0.5);
+            border-radius: 50%;
+            animation-delay: 0s;
+        }
+
+        .shape-2 {
+            bottom: -10%;
+            right: -10%;
+            width: 50vw;
+            height: 50vw;
+            background: rgba(118, 75, 162, 0.5);
+            border-radius: 50%;
+            animation-delay: -5s;
+        }
+
+        @keyframes float {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(30px, -50px) rotate(10deg); }
+            66% { transform: translate(-20px, 20px) rotate(-5deg); }
+            100% { transform: translate(0, 0) rotate(0deg); }
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 480px;
+            padding: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 3rem 2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transform: translateY(0);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.02em;
+        }
+
+        p.subtitle {
+            color: #718096;
+            margin-bottom: 2.5rem;
+            font-size: 1.125rem;
+            font-weight: 400;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .region-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.25rem 1.5rem;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            text-decoration: none;
+            color: #2d3748;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .region-link:hover {
+            border-color: #b794f4;
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(118, 75, 162, 0.15);
+        }
+
+        .region-link .arrow {
+            color: #a0aec0;
+            transition: color 0.2s, transform 0.2s;
+        }
+
+        .region-link:hover .arrow {
+            color: #764ba2;
+            transform: translateX(4px);
+        }
+
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            font-weight: 300;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 1rem;
+            }
+            .card {
+                padding: 2rem 1.5rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+
+    <div class="container">
+        <div class="card">
+            <h1>TrendLog2Day</h1>
+            <p class="subtitle">Select your language</p>
+            
+            <div class="links">
+                <a href="https://ko.trendlog2day.com" class="region-link">
+                    <span>🇰🇷 한국어 (Korean)</span>
+                    <span class="arrow">→</span>
+                </a>
+                <a href="https://en.trendlog2day.com" class="region-link">
+                    <span>🇺🇸 English</span>
+                    <span class="arrow">→</span>
+                </a>
+                <a href="https://ja.trendlog2day.com" class="region-link">
+                    <span>🇯🇵 日本語 (Japanese)</span>
+                    <span class="arrow">→</span>
+                </a>
+            </div>
+        </div>
+        <div class="footer">
+            &copy; 2026 TrendLog2Day. All rights reserved.
+        </div>
+    </div>
+</body>
+</html>
