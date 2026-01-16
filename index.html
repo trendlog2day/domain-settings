@@ -3,11 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TrendLog2Day - Global</title>
-    <meta name="description" content="Welcome to TrendLog2Day. Please select your region to continue.">
+    <title>TrendLog2Day - Global Trends | Issue Curation based on Google Trends</title>
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="TrendLog2Day - Global Trends | Issue Curation based on Google Trends">
+    <meta name="description" content="TrendLog2Day organizes and posts the latest global issues and hot topics based on Google Trends. Explore real-time trending news in English, Korean, and Japanese.">
+    <meta name="keywords" content="TrendLog2Day, Google Trends, Trending Topics, Global Issues, Hot Topics, Tech Trends, Viral News, English Blog, Korean Blog, Japanese Blog">
+    <meta name="author" content="TrendLog2Day">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://trendlog2day.com/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://trendlog2day.com/">
+    <meta property="og:title" content="TrendLog2Day - Global Trends | Issue Curation based on Google Trends">
+    <meta property="og:description" content="We organize and post the latest global issues and trending topics based on Google Trends data.">
+    <meta property="og:image" content="https://trendlog2day.com/assets/og-image.jpg">
+    <meta property="og:site_name" content="TrendLog2Day">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://trendlog2day.com/">
+    <meta property="twitter:title" content="TrendLog2Day - Global Trends | Issue Curation based on Google Trends">
+    <meta property="twitter:description" content="We organize and post the latest global issues and trending topics based on Google Trends data.">
+    <meta property="twitter:image" content="https://trendlog2day.com/assets/og-image.jpg">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "TrendLog2Day",
+      "url": "https://trendlog2day.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://trendlog2day.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      },
+      "description": "Global blog network that organizes and posts trending issues based on Google Trends in English, Korean, and Japanese."
+    }
+    </script>
+
     <style>
         :root {
             --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -16,6 +56,7 @@
             --text-color: #ffffff;
             --card-bg: rgba(255, 255, 255, 0.95);
             --card-text: #1a202c;
+            --secondary-text: #4a5568;
             --btn-hover: #f7fafc;
         }
 
@@ -76,7 +117,7 @@
             position: relative;
             z-index: 1;
             width: 100%;
-            max-width: 480px;
+            max-width: 560px; /* Slightly wider for more content */
             padding: 2rem;
         }
 
@@ -85,7 +126,7 @@
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border-radius: 24px;
-            padding: 3rem 2rem;
+            padding: 3rem 2.5rem;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
             text-align: center;
             transform: translateY(0);
@@ -100,8 +141,8 @@
         }
 
         h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
+            font-size: 2.75rem;
+            font-weight: 800;
             margin-bottom: 0.5rem;
             background: var(--primary-gradient);
             -webkit-background-clip: text;
@@ -109,11 +150,19 @@
             letter-spacing: -0.02em;
         }
 
-        p.subtitle {
+        h2 {
+            font-size: 1.1rem;
+            font-weight: 500;
             color: #718096;
+            margin-bottom: 1.5rem;
+        }
+        
+        .description {
+            font-size: 1rem;
+            color: var(--secondary-text);
+            line-height: 1.6;
             margin-bottom: 2.5rem;
-            font-size: 1.125rem;
-            font-weight: 400;
+            padding: 0 1rem;
         }
 
         .links {
@@ -135,6 +184,8 @@
             font-weight: 600;
             transition: all 0.2s ease;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
         }
 
         .region-link:hover {
@@ -153,6 +204,19 @@
             transform: translateX(4px);
         }
 
+        /* SEO-hidden text */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
         .footer {
             margin-top: 2rem;
             font-size: 0.875rem;
@@ -169,38 +233,59 @@
                 padding: 2rem 1.5rem;
             }
             h1 {
-                font-size: 2rem;
+                font-size: 2.25rem;
             }
         }
     </style>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-S4L6JHXDEM"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-S4L6JHXDEM');
+    </script>
 </head>
 <body>
     <div class="shape shape-1"></div>
     <div class="shape shape-2"></div>
 
-    <div class="container">
-        <div class="card">
-            <h1>TrendLog2Day</h1>
-            <p class="subtitle">Select your language</p>
+    <main class="container">
+        <article class="card">
+            <header>
+                <h1>TrendLog2Day</h1>
+                <h2>Global Trending Issues & Insights</h2>
+            </header>
             
-            <div class="links">
-                <a href="https://ko.trendlog2day.com" class="region-link">
+            <section class="description">
+                <p>Welcome to <strong>TrendLog2Day</strong>. We analyze <strong>Google Trends</strong> data to curate and deliver the most impactful global issues and hot topics daily.</p>
+                <p style="margin-top: 0.5rem; font-size: 0.9em; opacity: 0.9;">Choose your preferred language to explore our localized trend reports.</p>
+            </section>
+            
+            <nav class="links" aria-label="Region selection">
+                <a href="https://ko.trendlog2day.com" class="region-link" title="Visit Korean Blog">
                     <span>🇰🇷 한국어 (Korean)</span>
-                    <span class="arrow">→</span>
+                    <span class="arrow" aria-hidden="true">→</span>
                 </a>
-                <a href="https://en.trendlog2day.com" class="region-link">
+                <a href="https://en.trendlog2day.com" class="region-link" title="Visit English Blog">
                     <span>🇺🇸 English</span>
-                    <span class="arrow">→</span>
+                    <span class="arrow" aria-hidden="true">→</span>
                 </a>
-                <a href="https://ja.trendlog2day.com" class="region-link">
+                <a href="https://ja.trendlog2day.com" class="region-link" title="Visit Japanese Blog">
                     <span>🇯🇵 日本語 (Japanese)</span>
-                    <span class="arrow">→</span>
+                    <span class="arrow" aria-hidden="true">→</span>
                 </a>
+            </nav>
+        </article>
+        
+        <footer class="footer">
+            <p>&copy; 2026 TrendLog2Day. All rights reserved.</p>
+            <div class="sr-only">
+                <h3>About TrendLog2Day</h3>
+                <p>TrendLog2Day is a specialized blog that curates and posts real-time issues and viral trends based on Google Trends data. We provide in-depth analysis of global hot topics in Korean, English, and Japanese, helping readers stay ahead of the curve.</p>
             </div>
-        </div>
-        <div class="footer">
-            &copy; 2026 TrendLog2Day. All rights reserved.
-        </div>
-    </div>
+        </footer>
+    </main>
 </body>
 </html>
