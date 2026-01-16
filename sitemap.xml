@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <url>
+    <loc>https://trendlog2day.com/</loc>
+    <lastmod>2026-01-16T23:55:00+09:00</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ko.trendlog2day.com/</loc>
+    <lastmod>2026-01-16T23:55:00+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://en.trendlog2day.com/</loc>
+    <lastmod>2026-01-16T23:55:00+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ja.trendlog2day.com/</loc>
+    <lastmod>2026-01-16T23:55:00+09:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+</urlset>
